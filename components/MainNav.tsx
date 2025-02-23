@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { AsteriskIcon, RssIcon } from "lucide-react";
 import { POSTS } from "@/lib/constants";
+import { ModeToggle } from "./ModeToggle";
 
 export function MainNav({ className }: { className?: string }) {
     return (
@@ -60,7 +61,7 @@ export function MainNav({ className }: { className?: string }) {
                 </NavigationMenuList>
             </NavigationMenu>
             <div className="flex items-center justify-between w-20">
-                {/* <ModeToggle /> */}
+                <ModeToggle />
                 <Link href="/rss">
                     <RssIcon className="h-6 w-6" />
                 </Link>

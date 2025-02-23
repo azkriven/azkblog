@@ -1,0 +1,25 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Blog {
+  id        String    @id @default(auto()) @map("_id") @db.ObjectId
+  slug        String    @unique
+  title       String
+  category    String
+  view_count  Int       @default(1)
+
+  updatedAt DateTime  @updatedAt
+  createdAt DateTime  @default(now())
+}
+
+model Subscriber {
+  id        String    @id @default(auto()) @map("_id") @db.ObjectId
+  email           String  @unique
+  is_subscribed   Boolean @default(true)
+}

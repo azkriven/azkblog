@@ -1,4 +1,5 @@
 import Container from "@/components/Container";
+import LatestPosts from "@/components/home/LatestPosts";
 import { MainNav } from "@/components/MainNav";
 
 export default function Home() {
@@ -6,7 +7,9 @@ export default function Home() {
         <Container>
             <MainNav />
             <main className="flex flex-col items-start justify-evenly mt-16 md:flex-row">
-                <div>{/* <LatestPosts /> */}</div>
+                <div>
+                    <LatestPosts />
+                </div>
                 <div className="h-screen">
                     <div>
                         <h1 className="font-bold mb-4">TOP CATEGORIES</h1>

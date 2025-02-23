@@ -1,9 +1,10 @@
 import Container from "@/components/Container";
+import { MainNav } from "@/components/MainNav";
 
 export default function Home() {
     return (
         <Container>
-            {/* <MainNav /> */}
+            <MainNav />
             <main className="flex flex-col items-start justify-evenly mt-16 md:flex-row">
                 <div>{/* <LatestPosts /> */}</div>
                 <div className="h-screen">
